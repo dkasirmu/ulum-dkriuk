@@ -1,0 +1,159 @@
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f3f0fa;
+    color: #2d2d2d;
+    padding: 16px;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #6c3fc5;
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+}
+
+h3 {
+    color: #6c3fc5;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+a {
+    color: #6c3fc5;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* CARD - pembungkus tiap section */
+div {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(108, 63, 197, 0.1);
+}
+
+/* INPUT */
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid #d0bff5;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    outline: none;
+    transition: border 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #6c3fc5;
+}
+
+input[type="file"] {
+    font-size: 0.9rem;
+    color: #6c3fc5;
+}
+
+/* TOMBOL */
+button {
+    background-color: #6c3fc5;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #5530a8;
+}
+
+/* TABEL */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+th {
+    background-color: #6c3fc5;
+    color: white;
+    padding: 10px 8px;
+    text-align: left;
+}
+
+td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #ede8f9;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+.wrapper-tabel-sesi {
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+/* TOMBOL HAPUS di tabel */
+td button {
+    background-color: #e05a5a;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+}
+
+td button:hover {
+    background-color: #c04444;
+}
+
+/* SALDO LACI */
+#info-laci p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #6c3fc5;
+}
+
+/* alignment struk */
+#struk-items li {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 2px 0;
+}
+
+#struk-items {
+    padding-left: 0;
+}
+
+#tampilan-struk p {
+    display: flex;
+    justify-content: space-between;
+}
+
+#tampilan-struk h3,
+#struk-waktu {
+    text-align: center;
+    display: block;
+}
+
+#nama-toko {
+    text-align: center;
+}

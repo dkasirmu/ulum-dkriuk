@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riwayat - DKasirMu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="config.js"></script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3E6H6V22NJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-3E6H6V22NJ');
+    </script>
+</head>
+<body>
+    <h1 id="nama-toko"></h1>
+    <h2>Riwayat</h2>
+    <a href="index.html">← Kembali ke Kasir</a>
+
+    <!-- REKAP SESI -->
+    <div id="rekap-sesi">
+        <h3>Rekap Sesi Kasir</h3>
+        <div class="wrapper-tabel-sesi">
+            <table id="tabel-sesi">
+                <thead>
+                    <tr>
+                        <th>Waktu Buka</th>
+                        <th>Waktu Tutup</th>
+                        <th>Jml Transaksi</th>
+                        <th>Modal Awal</th>
+                        <th>Saldo Akhir</th>
+                        <th>Total Pendapatan</th>
+                    </tr>
+                </thead>
+                <tbody id="isi-sesi"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- RIWAYAT TRANSAKSI -->
+    <div id="riwayat-transaksi">
+        <h3>Riwayat Transaksi</h3>
+
+        <div id="area-filter">
+            <label>Dari:</label>
+            <input type="date" id="tanggal-mulai"><br>
+            <label>Sampai:</label>
+            <input type="date" id="tanggal-selesai"><br>
+            <button onclick="filterTransaksi()">Tampilkan</button>
+            <button onclick="exportTransaksiHtml()">Export Excel</button>
+        </div>
+
+        <table id="tabel-transaksi">
+            <thead>
+                <tr>
+                    <th>Waktu</th>
+                    <th>Items</th>
+                    <th>Total</th>
+                    <th>Bayar</th>
+                    <th>Kembalian</th>
+                </tr>
+            </thead>
+            <tbody id="isi-transaksi"></tbody>
+        </table>
+    </div>
+
+    <script type="module" src="js/riwayat.js"></script>
+    <script src="main.js"></script>
+    <footer style="text-align:center; padding: 16px; font-size: 0.85em; color: #888;">
+        Dibuat oleh <a href="tentang.html">Dhifa Studio</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Produk - DKasirMu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="config.js"></script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3E6H6V22NJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-3E6H6V22NJ');
+    </script>
+</head>
+<body>
+    <h1 id="nama-toko"></h1>
+    <h2>Manajemen Produk</h2>
+    <a href="index.html">← Kembali ke Kasir</a>
+
+    <!-- FORM TAMBAH PRODUK -->
+    <div id="form-produk">
+        <h3>Tambah / Edit Produk</h3>
+        <input type="text" id="input-nama" placeholder="Nama Produk">
+        <input type="number" id="input-harga" placeholder="Harga">
+        <button onclick="tambahProduk()">Simpan Produk</button>
+    </div>
+
+    <!--IMPORT EXCEL-->
+    <div id="import-xlsx">
+        <h3>Import dari Excel</h3>
+        <input type="file" id="file-xlsx" accept=".xlsx" onchange="importXLSX(event)">
+    </div>
+
+    <!-- PENCARIAN -->
+    <div id="pencarian">
+        <input type="text" id="input-cari" placeholder="Cari produk...." oninput="cariProduk()">
+    </div>
+    
+    <!-- TABEL PRODUK -->
+    <div id="daftar-produk">
+        <h3>Daftar Produk</h3>
+        <button onclick="exportProdukHtml()">Export Excel</button>
+        <table id="tabel-produk">
+            <thread>
+                <tr>
+                    <th>Nama</th>
+                    <th>Harga</th>
+                    <th>Aksi</th>
+                </tr>
+            </thread>
+            <tbody id="isi-tabel">
+                <!-- diisi JS -->
+            </tbody>
+        </table>
+    </div>
+
+    <script type="module" src="js/produk.js"></script>
+    <script src="main.js"></script>
+    <footer style="text-align:center; padding: 16px; font-size: 0.85em; color: #888;">
+        Dibuat oleh <a href="tentang.html">Dhifa Studio</a>
+    </footer>
+</body>
+</html>
